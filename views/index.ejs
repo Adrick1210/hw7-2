@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Welcome to gitPub</h1>
 
+    <ul>
+      <% for(let i = 0; i < drinks.length; i++) { %>
+      <li><%= drinks[i].name %></li>
+      <% } %>
+    </ul>
+
     <style type="text/css">
-        body {
-            background-color: steelblue;
-            color: blanchedalmond;
-        }
+      body {
+        background-color: steelblue;
+        color: blanchedalmond;
+      }
+
+      li {
+        text-transform: capitalize;
+      }
     </style>
-</body>
+  </body>
 </html>
