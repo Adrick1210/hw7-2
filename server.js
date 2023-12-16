@@ -12,6 +12,11 @@ app.get("/drinks", (req, res) => {
   res.render("index.ejs", { drinks });
 });
 
+// Show Route
+app.get("/drinks/:id", (req, res) => {
+  res.send(req.params.id);
+});
+
 app.listen(3000, () => {
   console.log("App is running");
 });
