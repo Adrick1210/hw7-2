@@ -6,13 +6,24 @@
     <%- include("./cssjs.ejs") %>
   </head>
   <body>
-    <h1>Welcome to gitPub</h1>
-
-    <ul>
-      <% for(let i = 0; i < drinks.length; i++) { %>
-      <a href="/drinks/<%= i %>"><li><%= drinks[i].name %></li></a>
-      <% } %>
-    </ul>
-
+    <h1 id="main-head">Welcome to gitPub</h1>
+    <div class="main">
+      <div class="drink-container">
+        <h2 id="drink-head">Drink Items:</h2>
+        <ul>
+          <% for(let i = 0; i < drinks.length; i++) { %>
+          <a href="/drinks/<%= i %>"><li><%= drinks[i].name %></li></a>
+          <% } %>
+        </ul>
+      </div>
+      <div class="food-container">
+        <h2 id="food-head">Food Items:</h2>
+        <ul>
+          <% for(let x = 0; x < food.length; x++) { %>
+          <a href="/food/<%= x %>"><li><%= food[x].name %></li></a>
+          <% } %>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
