@@ -8,10 +8,14 @@
   </head>
   <body>
     <!-- Food -->
-    <h1>At foo bar</h1>
-    <img src="<%= foodItem.image + '.png' %>" alt="<%= foodItem.name %>" />
-    <h2><%= foodItem.name %></h2>
-    <h3>$<%= foodItem.price %></h3>
-    <a href="/menu">Back to Index</a>
+    <div class="food">
+      <h1>At foo kitchen</h1>
+      <img src="<%= foodItem.image + '.png' %>" alt="<%= foodItem.name %>" />
+      <h2><%= foodItem.name %></h2>
+      <h3>$<%= foodItem.price %></h3>
+    </div>
+    <div class="home">
+      <a href="/menu">Back to Menu</a>
+    </div>
   </body>
 </html>

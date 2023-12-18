@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 
-// declare variables
+// declare data variables
 const drinks = require("./models/drinks.js");
 const food = require("./models/food.js");
 
