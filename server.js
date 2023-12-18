@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
+
 // declare variables
 const drinks = require("./models/drinks.js");
 const food = require("./models/food.js");
@@ -15,29 +16,24 @@ app.get("/", (req, res) => {
   res.send("<h1>Welcome to the Gitpub app!</h1>");
 });
 
-app.get("/drinks", (req, res) => {
+app.get("/menu", (req, res) => {
   res.render("index.ejs", { drinks, food });
 });
 
-app.get("/food", (req, res) => {
-  res.render("index.ejs", { drinks, food });
-});
-
-// Show Route
+// Show Routes
 app.get("/drinks/:id", (req, res) => {
   const id = req.params.id;
   const drinkItem = drinks[id];
-  console.log("drinkItem:", drinkItem);
-  res.render("show.ejs", { drinkItem, id });
+  res.render("showD.ejs", { drinkItem, id });
 });
 
 app.get("/food/:id", (req, res) => {
   const id = req.params.id;
   const foodItem = food[id];
-  console.log("foodItem:", foodItem);
-  res.render("show.ejs", { foodItem, id });
+  res.render("showF.ejs", { foodItem, id });
 });
 
+// Listener
 app.listen(3000, () => {
   console.log("App is running");
 });

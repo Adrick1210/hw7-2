@@ -7,20 +7,11 @@
     <%- include("./cssjs.ejs") %>
   </head>
   <body>
-    <% if(drinkItem) { %>
-    <!-- Drinks  -->
-    <h1>At foo bar</h1>
-    <img src="<%= drinkItem.image + '.png' %>" alt="<%= drinkItem.name %>" />
-    <h2><%= drinkItem.name %></h2>
-    <h3>$<%= drinkItem.price %></h3>
-    <a href="/drinks">Back to Index</a>
-    <% } else if (foodItem) { %>
     <!-- Food -->
     <h1>At foo bar</h1>
     <img src="<%= foodItem.image + '.png' %>" alt="<%= foodItem.name %>" />
     <h2><%= foodItem.name %></h2>
     <h3>$<%= foodItem.price %></h3>
-    <a href="/food">Back to Index</a>
-    <% } %>
+    <a href="/menu">Back to Index</a>
   </body>
 </html>
